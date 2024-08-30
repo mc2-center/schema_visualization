@@ -12,16 +12,16 @@ $.get('files/config.yml').done(function (data) {
     })
 
     //////////////////for using static files
-    // if (schema == "HTAN") {
-    //     var tangled_tree_data = parseJSON('files/JSON/HTAN_tangled_tree.json');
-    // }
+    if (schema == "HTAN") {
+        var tangled_tree_data = parseJSON('files/JSON/HTAN_tangled_tree.json');
+     }
 
-    // tangled_tree_data.then(tangled_tree_dta => {
-    //     //get tangle tree layout
-    //     var chart_dta = chart(tangled_tree_dta);
+        tangled_tree_data.then(tangled_tree_dta => {
+         //get tangle tree layout
+        var chart_dta = chart(tangled_tree_dta);
 
-    //     //draw collapsible tree
-    //     createCollapsibleTree(chart_dta, schema);
-    // })
+         //draw collapsible tree
+         createCollapsibleTree(chart_dta, schema);
+    })
 
 })
